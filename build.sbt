@@ -24,8 +24,8 @@ enablePlugins(AutomateHeaderPlugin)
 (sources in Test) := Nil
 
 scmInfo := Some(ScmInfo(url(
-  "https://github.com/ReactivePlatform/Pragmatic-Scala.git"),
-  "git@github.com:ReactivePlatform/Pragmatic-Scala.git"))
+  "https://github.com/ReactivePlatform/Netty-Best-Practices.git"),
+  "git@github.com:ReactivePlatform/Netty-Best-Practices.git"))
 
 git.remoteRepo := scmInfo.value.get.connection
 
@@ -40,22 +40,22 @@ ParadoxMaterialThemePlugin.paradoxMaterialThemeSettings(Paradox)
 
 
 paradoxProperties in Compile ++= Map(
-  "project.name" -> "Pragmatic-Scala",
-  "github.base_url" -> "https://github.com/ReactivePlatform/Pragmatic-Scala"
+  "project.name" -> "Netty-Best-Practices",
+  "github.base_url" -> "https://github.com/ReactivePlatform/Netty-Best-Practices"
 )
 
 paradoxMaterialTheme in Compile ~= {
   _.withColor("red", "pink")
     .withLogoIcon("cloud")
-    .withCopyright("Copyleft © 2018 pragmatic-scala.reactiveplatform.xyz")
-    .withRepository(uri("https://github.com/ReactivePlatform/Pragmatic-Scala.git"))
+    .withCopyright("Copyleft © 2018 netty-best-practices.reactiveplatform.xyz")
+    .withRepository(uri("https://github.com/ReactivePlatform/Netty-Best-Practices.git"))
     .withSearch(tokenizer = "[\\s\\-\\.]+")
     .withSocial(
       uri("https://github.com/hepin1989")
     )
 }
 
-organizationName := "pragmatic-scala.reactiveplatform.xyz"
+organizationName := "netty-best-practices.reactiveplatform.xyz"
 startYear := Some(2018)
 licenses += ("Apache-2.0", new URL("https://www.apache.org/licenses/LICENSE-2.0.txt"))
 
